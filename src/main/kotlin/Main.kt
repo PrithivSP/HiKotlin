@@ -1,14 +1,48 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-fun main() {
-    val name = "Kotlin"
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    println("Hello, " + name + "!")
+import basics.advantages.NullPointerHandling
+import datatypes.dataTypes
+import basics.variables
+import datatypes.arrays
+import datatypes.collections
 
-    for (i in 1..5) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        println("i = $i")
+fun main() {
+    println("1. Basic")
+    println("2. Datatypes")
+    print("Enter your choice: ")
+    val choice: Int? = readln().toIntOrNull()
+    println("\n")
+
+    when(choice) {
+        1 -> showBasic()
+        2 -> showDataTypes()
+        else -> println("Invalid choice")
+    }
+
+    val nullPointerHandling: NullPointerHandling = NullPointerHandling()
+    nullPointerHandling.main()
+}
+
+fun showBasic() {
+    println("1. Variables")
+    print("Enter your choice: ")
+    val choice: Int? = readln().toIntOrNull()
+    println("\n")
+    when(choice) {
+        1 -> variables()
+        else -> println("Invalid choice")
+    }
+}
+
+fun showDataTypes() {
+    println("1. Datatypes")
+    println("2. Arrays")
+    println("3. Collections")
+    print("Enter your choice: ")
+    val choice: Int? = readln().toIntOrNull()
+    println("\n")
+    when(choice) {
+        1 -> dataTypes()
+        2 -> arrays()
+        3 -> collections()
+        else -> println("Invalid choice")
     }
 }
