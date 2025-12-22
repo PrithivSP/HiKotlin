@@ -2,7 +2,7 @@ package datatypes
 
 typealias str = String
 
-class Calculator() {
+private class Calculator() {
     val byte: Byte = Byte.MAX_VALUE
     val short: Short = Short.MAX_VALUE
     val int: Int = Int.MAX_VALUE
@@ -13,7 +13,7 @@ class Calculator() {
     val addChar: Char = '+'
     val success: str = "Success"
 
-    var any: Any = "";
+    var any: Any = ""
 }
 
 fun dataTypes() {
@@ -26,10 +26,13 @@ fun dataTypes() {
     println("Maximum float value: " + calculatorApp.float)
     println("Maximum double value: " + calculatorApp.double)
 
+    //auto boxing and unboxing
     val byteToInt: Int = calculatorApp.byte.toInt()
     println("Boxed from byte to int: $byteToInt")
     val intToByte: Byte = calculatorApp.int.toByte()
     println("Boxed from int to byte: $intToByte")
+
+
     calculatorApp.any = ""
     calculatorApp.any = "123123123"
     println(calculatorApp.any)
@@ -42,3 +45,14 @@ fun dataTypes() {
         println("String is Any type")
     }
 }
+
+
+
+
+
+
+
+
+
+// Int -> int (jvm representation)
+// Int? -> Integer (jvm representation)

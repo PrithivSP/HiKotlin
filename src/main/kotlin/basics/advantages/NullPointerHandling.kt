@@ -16,3 +16,24 @@ class NullPointerHandling {
         println(length);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Core -> crashes at runtime (java)
+//        -> errors at compile time (kotlin)
+
+
+//variable -> not null - compile time error if null
+//         -> nullable - must handle the null
+

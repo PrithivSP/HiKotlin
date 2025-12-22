@@ -1,7 +1,10 @@
 package datatypes
 
 fun collections() {
+
+    //no int list
     val roles: List<String> = listOf("ADMIN", "EDITOR", "VIEWER")
+
     println("List of roles: $roles")
 
     val userRoles: MutableList<String> = mutableListOf("VIEWER")
