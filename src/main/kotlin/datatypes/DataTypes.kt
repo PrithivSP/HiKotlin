@@ -2,7 +2,7 @@ package datatypes
 
 typealias str = String
 
-private class Calculator() {
+private class Calculator(){
     val byte: Byte = Byte.MAX_VALUE
     val short: Short = Short.MAX_VALUE
     val int: Int = Int.MAX_VALUE
@@ -16,7 +16,7 @@ private class Calculator() {
     var any: Any = ""
 }
 
-fun dataTypes() {
+fun dataTypes(): Unit {
 
     val calculatorApp: Calculator = Calculator()
     println("Maximum byte value: " + calculatorApp.byte)
@@ -34,7 +34,7 @@ fun dataTypes() {
 
 
     calculatorApp.any = ""
-    calculatorApp.any = "123123123"
+    calculatorApp.any = 123
     println(calculatorApp.any)
 
     if (calculatorApp.any is Int) {  // "12123123" is int

@@ -5,7 +5,7 @@ const val requestCode = 100
 class Request {
 
 //    const val requestCode = 100
-
+    val syncPort: Int = 100
     val port: String = "8080"
     val requestedTime: Long = System.currentTimeMillis()
 
@@ -35,5 +35,20 @@ fun variables() {
 //var -> can be modifier
 //val -> cannot be modifier once initialized
 //
-//const -> compile time constant (only used with var)
+//const -> compile time constant (only used with val)
 //      -> allowed only in top level, named object, companion objects
+//      -> while compiling the bytecode, the const value is replaced, no variable lookup in runtime
+//      -> allowed types: primitives (Int, Long, Double, Boolean) and String
+
+
+//      const               vs              val
+
+// no memory allocation             stored as field in memory
+// during runtime
+
+// no lookups                       need read operations every time
+
+// no memory cost                   objects size is increased
+
+// primitive and String             primitive datatypes and collections
+// is allowed

@@ -3,7 +3,8 @@ package basics.controlflow
 fun conditionalFlow() {
     val role: String = "USER"
 
-    val accessLevel: String = if(role == "ADMIN") "FULL_ACCESS" else if(role == "USER") "LIMITED_ACCESS"  else "NO_ACCESS"
+    val accessLevel: String =
+        if (role == "ADMIN") "FULL_ACCESS" else if (role == "USER") "LIMITED_ACCESS" else "NO_ACCESS"
 
     val loginAttempts: Int = 2
 
@@ -12,9 +13,7 @@ fun conditionalFlow() {
     val securityRisk: String = when {
         loginAttempts == 0 -> "NONE"
         loginAttempts < 3 -> "LOW"
-        loginAttempts < 7 -> "MEDIUM"
-
-        //do not run
+        loginAttempts < 5 -> "MEDIUM"
         loginAttempts < 7 -> "HIGH"
         else -> "RISKY"
     }
@@ -39,7 +38,8 @@ fun conditionalFlow() {
 //2. clear readability
 //3. can check multiple conditions
 
-// with subject (1 -> something) and without subject (subject == 1 -> something) each branch is conditional
+// with subject -> matches against a value
+// without subject -> each branch is a boolean condition
 // need else in assignment
 // no need for else when checking with enums (exhaustiveness)
 

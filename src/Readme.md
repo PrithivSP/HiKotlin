@@ -2,10 +2,25 @@
 
 - [Null pointer](./main/kotlin/basics/advantages/NullPointerHandling.kt)
 
+## Basics
+
+- [Variables](./main/kotlin/basics/Variables.kt)
+- [Conditional statements](./main/kotlin/basics/controlflow/ConditionalFlow.kt)
+- [Loops](./main/kotlin/basics/controlflow/Loops.kt)
+- [Methods](./main/kotlin/basics/methods/Functions.kt)
+- [Tail rec function](./main/kotlin/basics/methods/TailrecFunction.kt)
+- [LambdaFun](./main/kotlin/basics/methods/LambdaFun.kt)
+- [Var args](./main/kotlin/basics/methods/Varargs.kt)
+
+## Data Types
+
+- [Datatypes](./main/kotlin/datatypes/DataClass.kt)
+- [Arrays](./main/kotlin/datatypes/Array.kt)
+- [Collection](./main/kotlin/datatypes/Collections.kt)
+- [Generics](./main/kotlin/datatypes/Generics.kt)
 
 ## OOPs
 
-- [class and instances](./main/kotlin/oops/classAndInstance/classAndInstances.kt)
-- [constructors](./main/kotlin/oops/classAndInstance/constructors.kt)
-- 
-1. Why we need kotlin 2. var and val 3. typealias 4. const 5. arrays 
+- [class and instances](./main/kotlin/oops/classAndInstance/ClassAndInstances.kt)
+- [constructors](./main/kotlin/oops/classAndInstance/Constructors.kt)
+- [encapsulation](./main/kotlin/oops/encapuslation/Encapsulation.kt)

@@ -40,6 +40,7 @@ fun varargs() {
     something(*ii.toIntArray())
 }
 
+
 //
 
 // one varargs per method

@@ -1,6 +1,6 @@
 package datatypes
 
-fun collections() {
+fun collections(){
 
     //no int list
     val roles: List<String> = listOf("ADMIN", "EDITOR", "VIEWER")
@@ -9,7 +9,7 @@ fun collections() {
 
     val userRoles: MutableList<String> = mutableListOf("VIEWER")
     println("Mutable list of user roles (before): $userRoles")
-    userRoles.add("")
+    userRoles.add("EDITOR")
     println("Mutable list of user roles (after): $userRoles")
 
     val order: Set<String> = setOf("Ramen", "Dosa", "Dosa")

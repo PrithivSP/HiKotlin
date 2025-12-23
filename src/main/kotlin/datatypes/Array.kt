@@ -14,6 +14,8 @@ fun arrays() {
     userId += "dsf"
     println("address of user ids changed: $userId")
 
+//    println(userId::class.simpleName)
+
     //nested array
     val twoDArray: Array<BooleanArray> = Array(3) { BooleanArray(3) { true } }
     println("Multi dimensional array: ${twoDArray.joinToString()}")

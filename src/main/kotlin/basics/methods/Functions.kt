@@ -9,9 +9,7 @@ fun constructPrintable(name: String, age: Int): String {
 
 fun isAdult(age: Int) = age >= 18
 
-
-fun createUserId(name: String, annotate: String = "@icici") =
-    name + annotate
+fun createUserId(name: String, annotate: String = "@icici") = name + annotate
 
 fun processRefund(amount: Int) {
 
@@ -40,12 +38,15 @@ fun execute(
 
 
 inline fun measureExecution(block: () -> Unit) {
-    val time = LocalDateTime.now().second;
-    println("Execution time: $time ms")
+    val start = LocalDateTime.now().second
+    block()
+    val end = LocalDateTime.now().second
+    println("Execution time: ${end - start} ms")
 }
 
 
-tailrec fun retryLogin(attempts: Int) {
+
+fun retryLogin(attempts: Int) {
     if (attempts == 0) {
         println("No attempts left")
         return
@@ -79,7 +80,6 @@ val nameValidator = fun(name: String): Boolean {
     if (name.isBlank()) return false
     return name.length > 2
 }
-
 
 infix fun Int.isWithin(limit: Int): Boolean {
     return this <= limit
@@ -121,7 +121,7 @@ fun functions() {
     println()
 
     println("TAIL RECURSIVE FUNCTION")
-    retryLogin(3)
+    retryLogin(10000)
     println()
 
     println("EXTENSION FUNCTION")
@@ -137,16 +137,16 @@ fun functions() {
     println("Valid name: ${nameValidator("Kotlin")}")
     println()
 
-    var total = 0
+    var totalLogins = 0
 
     val add = { x: Int ->
-        total += x
+        totalLogins += x
     }
 
-    add(5)
-    add(3)
+    add(1)
+    add(1)
 
-    println(total)
+    println(totalLogins)
 
     if(12 isWithin 100) {
         println("12 is within 100")
@@ -200,7 +200,7 @@ fun functions() {
 //                     - Utils.isValidEmail(email) wrong
 //                     - email.isValidEmail() correct
 
-//9. suspend function - for threading
+//9. operation functions - override operators
 
 //10. tailing(tail rec) function - means the recursion happens at last, after the recursion call nothing happens
 //                              - if a recursion is safe, convert it into loop
@@ -210,7 +210,7 @@ fun functions() {
 
 //11. operator function
 
-//12. anonymous function
+//12. anonymous function -  better control with return type. lambdas cannot have return type directly (used with labels)
 
 // 13. infix functions - rules: should be member function or extension function,
 //                              should have only one parameter,
