@@ -1,4 +1,4 @@
-package datatypes
+package datatypes.classesTypes
 
 import java.time.LocalDateTime
 
@@ -67,16 +67,16 @@ fun dataClass() {
     )
 
     println()
-    println("=== toString() Output ===")
+    println("=== toString()  ===")
     println("BookingDisplay 1 : $bookingDisplay1")
     println("BookingDisplay 2 : $bookingDisplay2")
 
     println()
-    println("=== equals() | == Comparison ===")
+    println("=== equals()  ===")
     println("bookingDisplay1 == bookingDisplay2 : ${bookingDisplay1 == bookingDisplay2}")
 
     println()
-    println("=== hashCode() Values ===")
+    println("=== hashCode() ===")
     println("bookingDisplay1.hashCode() : ${bookingDisplay1.hashCode()}")
     println("bookingDisplay2.hashCode() : ${bookingDisplay2.hashCode()}")
 
@@ -95,8 +95,7 @@ fun dataClass() {
     println("Copy     : $bookingDisplay3")
 
     println()
-    println("=== componentN() | Destructuring Example ===")
-
+    println("=== componentN() | Destructuring ===")
 
     val (
         bookingId,
@@ -107,7 +106,6 @@ fun dataClass() {
         showDate,
         showTime
     ) = bookingDisplay1
-
 
 
     println("Booking ID  : $bookingId")
@@ -122,7 +120,7 @@ fun dataClass() {
 
 //data class - used to hold data
 
-//equals()
+//equals() overrides == and checks for values
 //hashCode()
 //toString()
 //copy logic

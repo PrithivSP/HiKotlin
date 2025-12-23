@@ -14,7 +14,7 @@
 
 ## Data Types
 
-- [Datatypes](./main/kotlin/datatypes/DataClass.kt)
+- [Datatypes](main/kotlin/datatypes/classesTypes/DataClass.kt)
 - [Arrays](./main/kotlin/datatypes/Array.kt)
 - [Collection](./main/kotlin/datatypes/Collections.kt)
 - [Generics](./main/kotlin/datatypes/Generics.kt)
@@ -24,3 +24,7 @@
 - [class and instances](./main/kotlin/oops/classAndInstance/ClassAndInstances.kt)
 - [constructors](./main/kotlin/oops/classAndInstance/Constructors.kt)
 - [encapsulation](./main/kotlin/oops/encapuslation/Encapsulation.kt)
+
+## Class Types
+
+- [Data class](main/kotlin/datatypes/classesTypes/DataClass.kt)
