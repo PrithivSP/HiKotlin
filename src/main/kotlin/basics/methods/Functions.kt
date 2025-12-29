@@ -197,6 +197,7 @@ fun functions() {
 //                 -  but if we use normal function - a function call, stack frame creation, jump to another memory location
 
 //8. extension functions - utility feels separate
+//                       - can be used with datatypes but also classes, interface, enums, sealed class, objects, companion objects
 //                     - Utils.isValidEmail(email) wrong
 //                     - email.isValidEmail() correct
 

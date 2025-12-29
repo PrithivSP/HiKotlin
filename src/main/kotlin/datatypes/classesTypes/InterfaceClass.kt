@@ -17,6 +17,7 @@ class TerminalLogger(override val loggerType: String) : LoggingManager {
 
 fun interfaceClass() {
     val terminalLogger: LoggingManager = TerminalLogger("Terminal")
+
     // default method
     terminalLogger.start()
 
@@ -40,14 +41,16 @@ fun interfaceClass() {
 // cannot have constructor
 // cannot have init block
 // cannot have states
+// cannot have protected or internal for properties
 
 // can:
 // have default method
 // child class can override default methods
+// have companion object
 
 // properties:
 // fields, methods are default by abstract
+// fields are public by default
 
 // memory:
 // interface is stored in method area
-// default methods are copied into implementing class

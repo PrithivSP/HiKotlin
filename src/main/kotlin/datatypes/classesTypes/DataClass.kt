@@ -81,7 +81,7 @@ fun dataClass() {
     println("bookingDisplay2.hashCode() : ${bookingDisplay2.hashCode()}")
 
     println()
-    println("=== copy() - no mutation ===")
+    println("=== copy() - no mutation (deep copy) ===")
     val bookingDisplay3 = bookingDisplay1.copy()
     println("Before modification:")
     println("Original : $bookingDisplay1")
@@ -125,4 +125,4 @@ fun dataClass() {
 //toString()
 //copy logic
 
-//componentN()
+//componentN() - destructuring

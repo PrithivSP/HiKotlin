@@ -16,7 +16,7 @@
 
 - [Datatypes](main/kotlin/datatypes/classesTypes/DataClass.kt)
 - [Arrays](./main/kotlin/datatypes/Array.kt)
-- [Collection](./main/kotlin/datatypes/Collections.kt)
+- [Collection](main/kotlin/datatypes/collections/Collections.kt)
 - [Generics](./main/kotlin/datatypes/Generics.kt)
 
 ## OOPs

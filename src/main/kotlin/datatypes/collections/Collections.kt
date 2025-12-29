@@ -1,4 +1,4 @@
-package datatypes
+package datatypes.collections
 
 fun collections(){
 
@@ -25,6 +25,7 @@ fun collections(){
     println("Employee login status: $employeeLoginStatus")
 
     //deque
+
     val deque = ArrayDeque(roles)
 
     deque.addLast("An element")
@@ -38,8 +39,18 @@ fun collections(){
 }
 
 
+
+
+
+
+
+
+
+
 // mutable list - default size 10
 
 // mutable set - default size 16
 
 // mutable map - default size 16
+
+// array deque - default size 16

@@ -1,6 +1,5 @@
 package oops.classAndInstance
 
-import javax.print.attribute.standard.JobPriority
 
 open class Order {
     var status: String = "CREATED"
@@ -22,23 +21,24 @@ fun updatePriority(order: Order, priority: Int) {
     order.priority = priority
 }
 
-fun main() {
+fun accessSpecifiers() {
     val order = Order()
 
 //     order.status = "DONE"     // private setter
-    println(order.status)        // getter allowed
+    println("Order status: " + order.status)        // getter
 
 
     order.priority = 2        // internal setter (blocked outside module)
     updatePriority(order,2)
-    println(order.priority)      // getter allowed
+    println("Order priority: " + order.priority)      // getter
 
 
 //     order.amount = 500.0      // protected setter
-    println(order.amount)        // getter allowed
+    println("Order Price: " + order.amount)        // getter
 
 
     order.cancelOrder()          // controlled update
+    println("Order status: " + order.status)
 }
 
 

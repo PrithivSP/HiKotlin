@@ -2,20 +2,27 @@ package datatypes.classesTypes
 
 abstract class PaymentProcessor() {
 
+    var version: String = "1.0"
+
     abstract val paymentType: String?
+
     abstract fun pay(amount: Double)
+
     fun printPaymentDetails() {
         println("Payment Details")
         println("Payment Type : ${paymentType ?: "N/A"}")
     }
+
 }
 
 class UPIPaymentProcessor() : PaymentProcessor() {
     override val paymentType: String = "UPI"
+
     override fun pay(amount: Double) {
         println("Payment Process")
         println("Paying $amount...")
     }
+
 }
 
 fun abstractClass() {
@@ -23,10 +30,14 @@ fun abstractClass() {
     val paymentProcessor = UPIPaymentProcessor()
 
     paymentProcessor.printPaymentDetails()
-    println()
     paymentProcessor.pay(200.0)
 
 }
+
+
+
+
+
 
 // abstract class
 

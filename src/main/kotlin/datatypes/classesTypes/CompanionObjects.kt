@@ -24,12 +24,12 @@ class Order(val orderId: String, val amount: Double) {
             return orderCounter
         }
 
-        const val ORDER_TYPE = "ONLINE"
+//        const val ORDER_TYPE = "ONLINE"
     }
 }
 
 
-fun main() {
+fun companionObjectClass() {
     val order1 = Order("ORD-1", 500.0)
     order1.printOrderDetails()
     val order2 = Order("ORD-2", 1200.0)

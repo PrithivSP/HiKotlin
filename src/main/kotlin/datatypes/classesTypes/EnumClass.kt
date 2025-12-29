@@ -1,21 +1,21 @@
 package datatypes.classesTypes
 
-enum class BookingStatus {
+
+enum class BookingStatus() {
     BOOKED,
     CANCELLED;
 
     // method
-
     fun getCode(): Int {
         return this.ordinal
     }
 }
 
 
-fun main() {
+fun enumClass() {
     val currentBookingStatus = BookingStatus.CANCELLED
 
-    println("Current Booking status: ${currentBookingStatus}")
+    println("Current Booking status: $currentBookingStatus")
 
     when (currentBookingStatus) {
         BookingStatus.BOOKED -> println("Ticket is confirmed")
@@ -40,6 +40,7 @@ fun main() {
 // cannot have abstract state (only abstract functions allowed)
 
 //can:
+// can inherit interface
 // use when exhaustively without else
 // implement interfaces
 
@@ -49,14 +50,14 @@ fun main() {
 
 
 // sealed vs enum
-
+// choose enum when
 // if each type has different fields
 // if each type has different behaviour
 // if instances carry runtime data
 
 
 // memory:
-// enum meta data is stored in method area
+// enum metadata is stored in method area
 // enum constants lives in heap
 // exactly one instance per constant
 // created during at class loading

@@ -12,7 +12,6 @@ fun scopeFunctions() {
     val newUserAccount = UserAccount("U1", "John", "john@zoho.com", 0.0, false)
 
 //    let
-
     val emailDomain = newUserAccount.email?.let {
         it.substringAfter("@")
     }
@@ -20,7 +19,6 @@ fun scopeFunctions() {
     println("User email domain: $emailDomain")
 
 //    run
-
     val taxAmount = newUserAccount.run {
         this.balance * 0.18
     }
@@ -28,26 +26,21 @@ fun scopeFunctions() {
     println("User tax: $taxAmount")
 
 //    with
-
     with(newUserAccount) {
-        println("User id:       ${this.id}")
-        println("User name:     ${this.name}")
+        println("User id:       $id")
+        println("User name:     $name")
         println("User email id: ${this.email}")
         println("User active:   ${this.isActive}")
     }
 
 //    apply
-
     newUserAccount.apply {
         balance += 100
         isActive = true
     }.also { iterator ->
 //    also
-
         println("Updated user account $iterator")
     }
-
-
 
 }
 
