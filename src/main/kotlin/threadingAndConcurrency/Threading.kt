@@ -16,7 +16,7 @@ class SpellCheck: Runnable {
     }
 }
 
-fun main() {
+fun threading() {
     println("Current thread: ${Thread.currentThread().name}")
 
     //1. thread class + lambda

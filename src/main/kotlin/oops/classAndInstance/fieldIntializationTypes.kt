@@ -29,7 +29,7 @@ class Theater(var theaterId: String, name: String) {
 
 }
 
-fun main() {
+fun fieldInitializationTypes() {
 
     val newTheater: Theater = Theater("1", "PVR")
 

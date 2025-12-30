@@ -13,7 +13,7 @@ class BankAccount {
     }
 }
 
-fun main() {
+fun concurrency() {
     val account = BankAccount()
 
     val t1 = Thread {

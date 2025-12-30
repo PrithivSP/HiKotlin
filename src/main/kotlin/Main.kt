@@ -24,13 +24,22 @@ import datatypes.classesTypes.nestedAndInnerClass
 import datatypes.classesTypes.objectClass
 import datatypes.classesTypes.sealedClass
 import datatypes.collections.collectionSpecificFunctions
+import kotlinx.coroutines.delay
 import oops.abstraction.abstraction
 import oops.classAndInstance.accessSpecifiers
+import oops.classAndInstance.fieldInitializationTypes
 import oops.delegation.classDelegation
 import oops.delegation.propertiesDelegation
 import oops.encapuslation.encapsulation
 import oops.inheritance.inheritance
 import oops.polymorphism.polymorphism
+import threadingAndConcurrency.concurrency
+import threadingAndConcurrency.coroutineExample
+import threadingAndConcurrency.coroutineMemoryUsage
+import threadingAndConcurrency.coroutines
+import threadingAndConcurrency.joinVsJoinAll
+import threadingAndConcurrency.threadFunctions
+import threadingAndConcurrency.threading
 
 
 fun main() {
@@ -39,6 +48,7 @@ fun main() {
         println("1. Basic")
         println("2. Datatypes")
         println("3. OOPS")
+        println("4. Threads and Concurrency")
         println("0. Exit")
         print("Enter your choice: ")
         val choice: Int? = readln().toIntOrNull()
@@ -48,6 +58,7 @@ fun main() {
             1 -> showBasic()
             2 -> showDataTypes()
             3 -> showOOPs()
+            4 -> showThreadsAndConcurrency()
             0 -> break;
             else -> println("Invalid choice")
         }
@@ -156,6 +167,7 @@ fun showOOPs() {
     println("7. Polymorphism")
     println("8. Class Delegation")
     println("9. Property Delegation")
+    println("10. Field initialization types")
     print("Enter your choice: ")
     val choice: Int? = readln().toIntOrNull()
     println("\n")
@@ -169,8 +181,33 @@ fun showOOPs() {
         7 -> polymorphism()
         8 -> classDelegation()
         9 -> propertiesDelegation()
+        10 -> fieldInitializationTypes()
         else -> println("Invalid choice")
     }
     println("\n")
 
+}
+
+fun showThreadsAndConcurrency() {
+    println("1. Threading")
+    println("2. Concurrency")
+    println("3. Thread functions")
+    println("4. Coroutines")
+    println("5. Coroutine memory usage")
+    println("6. Join (threads) vs Join All (coroutines)")
+    println("7. Coroutine real time example")
+    print("Enter your choice: ")
+    val choice: Int? = readln().toIntOrNull()
+    println("\n")
+    when(choice) {
+        1 -> threading()
+        2 -> concurrency()
+        3 -> threadFunctions()
+        4 -> coroutines()
+        5 -> coroutineMemoryUsage()
+        6 -> joinVsJoinAll()
+        7 -> coroutineExample()
+        0 -> return
+        else -> println("Invalid choice")
+    }
 }
